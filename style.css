@@ -1,0 +1,248 @@
+/* ==================== MES VARIABLES ==================== */
+:root{
+    --var-color-bg-nav          : #5d23a0;
+    --var-color-border-section  : #cecece;
+    --var-color-contour-profil  : #8228b6;
+    --var-color-font-standard   : #343a40;
+    --var-color-text-contenu    : #868e96;
+}
+
+/* ==================== MA STRUCTURE ==================== */
+html {
+    /* defilement fluid lors de la navigation */
+    scroll-behavior: smooth; 
+    scrollbar-color: var(--var-color-bg-nav) white;
+    scrollbar-width: thin;
+  }
+
+html::-webkit-scrollbar {
+    /* appliqué a l'ensemble de l'acenseur */
+    width: 5px;
+    background-color: transparent; 
+}
+
+html::-webkit-scrollbar-thumb {
+    /* appliqué a la "poignée" de l'ascenseur  */
+    background:var(--var-color-bg-nav); 
+}
+
+
+*::selection{
+    background-color: var(--var-color-bg-nav);
+    color: white;
+}
+  
+  /* Firefox */
+*::-moz-selection {
+    background-color: var(--var-color-bg-nav);
+    color: white;
+}
+
+body{
+    margin: 0;
+    color: var(--var-color-font-standard);
+    font-family: 'Muli', 'sans-serif';
+}
+
+nav{
+    position: fixed;
+    top :0 ;
+    left: 0;
+    width: 17rem;
+    height: 100vh;
+    background-color: var(--var-color-bg-nav);
+}
+
+.contenu{
+    margin-left: 17rem;
+    scroll-behavior: smooth;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: solid 2px var(--var-color-border-section);
+    padding:3rem;
+}
+
+section:not(#experiences){
+    height: calc(100vh - 6rem);
+}
+
+/* ==================== MARGES ET DECORATION ==================== */
+a {
+    text-decoration: none;
+}
+
+li{
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: var(--var-color-text-contenu);
+}
+
+ul{
+    padding: 0;
+}
+
+p{
+    color: var(--var-color-text-contenu);
+    margin: 0;
+}
+
+.p-color-theme{
+    color: var(--var-color-bg-nav);
+    opacity: 100%;
+}
+
+.pos-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h2{
+    color: var(--var-color-font-standard);
+    text-transform: uppercase;
+    font-family: 'Saira Extra Condensed';
+    font-size: 3.5rem;
+    font-weight: 700;    
+}
+
+h3{
+    color: var(--var-color-font-standard);
+    font-family: 'Saira Extra Condensed';
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.sous-titre{
+    font-family: 'Saira Extra Condensed';
+    font-size: 1.5rem !important;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.sous-titre:not(.not-st){
+    margin-bottom: 1rem;
+}
+
+
+/* ==================== MENU NAVIGATION ==================== */
+.container-fluid-nav{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.container-nav{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.photoProfil{
+    width: 150px;
+    border-radius: 50%;
+    border: solid 10px var(--var-color-contour-profil);
+}
+
+nav li{
+    margin: 1rem;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.1rem;
+    line-height: 1.5rem;
+    font-family: 'Muli', 'sans-serif';
+}
+
+nav li a{
+    color: white;
+    opacity: 50%;
+    text-transform: uppercase;
+}
+
+nav li a:hover{
+    opacity: 100%;
+}
+
+/* ==================== PRESENTATION ==================== */
+
+h1{
+    font-size: 6rem;
+    line-height: 5.5rem;
+    text-transform: uppercase;
+    font-family: 'Saira Extra Condensed';
+    margin: 0;
+}
+
+.p-presentation{
+    font-size: 1.2rem;
+    margin: 3rem 1rem 3rem 0rem;
+}
+.logo-social a{
+    margin: 0 1.5rem;
+}
+
+.logo-social img{
+    width: 3rem;
+    padding: 0.5rem;
+    background-color: var(--var-color-font-standard);
+    border-radius: 50%;
+    
+}
+
+.logo-social a:first-child{
+    margin-left: 0;
+}
+
+.logo-social img:hover{
+    background-color: var(--var-color-bg-nav);
+}
+
+/* ==================== EXPERIENCES ==================== */
+.uneExperience{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.date-experience{
+    min-width: 18rem;
+}
+
+/* ==================== COMPETENCES ==================== */
+.logo-techno{
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0;
+}
+
+.icon-competence{
+    filter: grayscale(100%);
+    width: 4rem;
+    margin: 1rem;
+}
+
+.icon-competence:first-child{
+    margin-left: 0 !important;
+}
+
+.icon-competence:hover{
+    filter: grayscale(0);
+}
+
+#competences li, #certifications li{
+    list-style: url('images/tick.svg');
+    margin: 1rem;
+    font-size: 1rem;
+}
+
