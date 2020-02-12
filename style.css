@@ -51,6 +51,7 @@ nav{
     width: 17rem;
     height: 100vh;
     background-color: var(--var-color-bg-nav);
+    z-index: 1000;
 }
 
 .contenu{
@@ -188,6 +189,7 @@ h1{
     font-size: 1.2rem;
     margin: 3rem 1rem 3rem 0rem;
 }
+
 .logo-social a{
     margin: 0 1.5rem;
 }
@@ -307,5 +309,84 @@ h1{
     .realisationPicture{
         height: 17rem;
         width: auto;
+    }
+}
+
+@media screen and (max-width : 730px){
+
+    nav{
+        position: fixed;
+        top :0 ;
+        left: 0;
+        width: 100%;
+        height: 5rem;
+    }
+    
+    .contenu{
+        margin:8rem 0 0 0;
+    }
+
+    section{
+        height: auto !important;
+        padding: 3rem 1rem;
+    }
+
+    .container-nav{
+        position: relative;
+    }
+    
+    .photoProfil{
+        position: absolute;
+        width: 7rem;
+        height: 7rem;
+        top: 0.8rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        border: solid 8px var(--var-color-bg-nav);
+    }
+    
+    nav li{
+        display: none;
+    }
+    
+    h1, p:not(.p-color-theme){
+        text-align: center;
+    }
+
+    .sous-titre{
+        text-align: left !important;
+    }
+
+    .logo-social{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .logo-social a{
+        margin: 0;
+    }
+    
+    .logo-social img{
+        width: 2.5rem;
+        padding: 0.5rem;
+        background-color: var(--var-color-font-standard);
+        border-radius: 50%;
+    }
+
+    /* ==================== realisation ==================== */
+
+    .realisationPicture{
+        height: 10rem;
+        width: auto;
+        margin: 1rem;
+        -webkit-transform: rotate(10deg);
+        transform: rotate(0);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+    }
+
+    #interet{
+        padding-bottom: 11rem !important;
     }
 }
