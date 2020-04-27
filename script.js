@@ -24,7 +24,6 @@ function modeSombre() {
         document.querySelector(':root').style.setProperty("--var-color-text-contenu", '#c0c0c0');
         document.querySelector(':root').style.setProperty("--var-color-white", '#121212');//ok
 
-        document.getElementById('logo-fb-header').innerHTML = '<img src="images/iconFb-ms.png" alt="logo-fb" class="logo-fb">'
         btnDark.innerHTML ='<i class="fas fa-moon"></i>';
         return darkTheme = true;
 
