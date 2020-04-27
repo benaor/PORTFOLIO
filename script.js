@@ -9,20 +9,22 @@ function closeBurger() {
 }
 
 //Dark mode
-let btnDark = document.getElementById('btn-dark-theme');
+let btnDark  = document.getElementById('btn-dark-theme');
+let linkDark = document.getElementById('a-dark-theme');
+
 let darkTheme = false;
 
 function modeSombre() {
 
     if (darkTheme == false) {
 
-        //Active darky mode 
-        document.querySelector(':root').style.setProperty("--var-color-bg-nav", '#e8b5db');//ok
-        document.querySelector(':root').style.setProperty("--var-color-border-section", '#232323');//ok
+        //Active darky mode
+        document.querySelector(':root').style.setProperty("--var-color-bg-nav", '#e8b5db');
+        document.querySelector(':root').style.setProperty("--var-color-border-section", '#232323');
         document.querySelector(':root').style.setProperty("--var-color-contour-profil", '#d476bc');
         document.querySelector(':root').style.setProperty("--var-color-font-standard", '#cecece');
         document.querySelector(':root').style.setProperty("--var-color-text-contenu", '#c0c0c0');
-        document.querySelector(':root').style.setProperty("--var-color-white", '#121212');//ok
+        document.querySelector(':root').style.setProperty("--var-color-white", '#121212');
 
         document.getElementById('logo-fb-header').innerHTML = '<img src="images/iconFb-ms.png" alt="logo-fb" class="logo-fb">'
         document.getElementById('logo-ld-header').innerHTML = '<img src="images/iconLd-ms.png" alt="logo-fb" class="logo-linkedin">'
@@ -53,3 +55,4 @@ function modeSombre() {
 
 //Event listener for dark theme
 btnDark.addEventListener('click', modeSombre);
+linkDark.addEventListener('click', modeSombre);
