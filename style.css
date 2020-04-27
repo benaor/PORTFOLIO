@@ -140,6 +140,10 @@ h3{
     display: none;
 }
 
+.navTel{
+    display: none;
+}
+
 .container-fluid-nav{
     position: relative;
     width: 100%;
