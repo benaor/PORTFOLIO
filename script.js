@@ -18,11 +18,15 @@ function modeSombre() {
 
         //Active darky mode 
         document.querySelector(':root').style.setProperty("--var-color-bg-nav", '#e8b5db');//ok
-        document.querySelector(':root').style.setProperty("--var-color-border-section", '#333333');//ok
+        document.querySelector(':root').style.setProperty("--var-color-border-section", '#232323');//ok
         document.querySelector(':root').style.setProperty("--var-color-contour-profil", '#d476bc');
         document.querySelector(':root').style.setProperty("--var-color-font-standard", '#cecece');
         document.querySelector(':root').style.setProperty("--var-color-text-contenu", '#c0c0c0');
         document.querySelector(':root').style.setProperty("--var-color-white", '#121212');//ok
+
+        document.getElementById('logo-fb-header').innerHTML = '<img src="images/iconFb-ms.png" alt="logo-fb" class="logo-fb">'
+        document.getElementById('logo-ld-header').innerHTML = '<img src="images/iconLd-ms.png" alt="logo-fb" class="logo-linkedin">'
+        document.getElementById('logo-git-header').innerHTML = '<img src="images/iconGit-ms.png" alt="logo-fb" class="logo-git">'
 
         btnDark.innerHTML ='<i class="fas fa-moon"></i>';
         return darkTheme = true;
@@ -36,6 +40,10 @@ function modeSombre() {
         document.querySelector(':root').style.setProperty("--var-color-font-standard", '#343a40');
         document.querySelector(':root').style.setProperty("--var-color-text-contenu", '#868e96');
         document.querySelector(':root').style.setProperty("--var-color-white", '#ffffff');
+
+        document.getElementById('logo-fb-header').innerHTML = '<img src="images/iconFb.png" alt="logo-fb" class="logo-fb">'
+        document.getElementById('logo-ld-header').innerHTML = '<img src="images/iconLd.png" alt="logo-fb" class="logo-linkedin">'
+        document.getElementById('logo-git-header').innerHTML = '<img src="images/iconGit.png" alt="logo-fb" class="logo-git">'
 
         btnDark.innerHTML ='<i class="fas fa-sun"></i>';
         return darkTheme = false;
