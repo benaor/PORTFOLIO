@@ -5,6 +5,7 @@
     --var-color-contour-profil  : #8228b6;
     --var-color-font-standard   : #343a40;
     --var-color-text-contenu    : #868e96;
+    --var-color-white           : #ffffff;
 }
 
 /* ==================== MA STRUCTURE ==================== */
@@ -29,19 +30,20 @@ html::-webkit-scrollbar-thumb {
 
 *::selection{
     background-color: var(--var-color-bg-nav);
-    color: white;
+    color: var(--var-color-white);
 }
   
   /* Firefox */
 *::-moz-selection {
     background-color: var(--var-color-bg-nav);
-    color: white;
+    color: var(--var-color-white);
 }
 
 body{
     margin: 0;
     color: var(--var-color-font-standard);
     font-family: 'Muli', 'sans-serif';
+    background-color: var(--var-color-white);
 }
 
 nav{
@@ -158,6 +160,15 @@ h3{
     transform: translate(-50%, -50%);
 }
 
+.dark-theme{
+    border: none;
+    background: transparent;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--var-color-white);
+    opacity: 50%;
+}
+
 .photoProfil{
     width: 150px;
     border-radius: 50%;
@@ -174,7 +185,7 @@ nav li{
 }
 
 nav li a{
-    color: white;
+    color: var(--var-color-white);
     opacity: 50%;
     text-transform: uppercase;
 }
